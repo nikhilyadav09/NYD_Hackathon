@@ -1,0 +1,238 @@
+Here’s a curated list of **open-source language models** for various NLP tasks like text generation, embeddings, summarization, and translation. Each model includes details, use cases, and code examples to help you get started.
+
+---
+
+### **1. Sentence-BERT (SBERT)**
+**Use Case**: Sentence embeddings, semantic similarity, clustering.  
+**How to Use**:
+Install the `sentence-transformers` library:
+```bash
+pip install sentence-transformers
+```
+
+Example:
+```python
+from sentence_transformers import SentenceTransformer, util
+
+# Load pre-trained model
+model = SentenceTransformer('all-MiniLM-L6-v2')
+
+# Example sentences
+sentences = ["I love programming.", "Coding is my passion."]
+
+# Generate embeddings
+embeddings = model.encode(sentences)
+
+# Compute similarity
+similarity = util.cos_sim(embeddings[0], embeddings[1])
+print("Similarity score:", similarity.item())
+```
+
+---
+
+### **2. LLaMA (Large Language Model Meta AI)**
+**Use Case**: Text generation, summarization, fine-tuning.  
+**How to Use**:
+Install Hugging Face Transformers:
+```bash
+pip install transformers
+```
+
+Example:
+```python
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+# Load LLaMA model and tokenizer
+tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-hf")
+model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-hf")
+
+# Generate text
+inputs = tokenizer("Explain AI.", return_tensors="pt")
+outputs = model.generate(inputs["input_ids"], max_length=50)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+```
+
+---
+
+### **3. BLOOM (BigScience)**
+**Use Case**: Multilingual text generation, summarization, and more.  
+**How to Use**:
+Install dependencies:
+```bash
+pip install transformers
+```
+
+Example:
+```python
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+# Load BLOOM model and tokenizer
+tokenizer = AutoTokenizer.from_pretrained("bigscience/bloom-560m")
+model = AutoModelForCausalLM.from_pretrained("bigscience/bloom-560m")
+
+# Generate text
+inputs = tokenizer("Translate 'hello' to French:", return_tensors="pt")
+outputs = model.generate(inputs["input_ids"], max_length=30)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+```
+
+---
+
+### **4. GPT-J and GPT-Neo (EleutherAI)**
+**Use Case**: Text generation, dialogue systems, and Q&A.  
+**How to Use**:
+Install transformers:
+```bash
+pip install transformers
+```
+
+Example:
+```python
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+# Load GPT-J model
+tokenizer = AutoTokenizer.from_pretrained("EleutherAI/gpt-j-6B")
+model = AutoModelForCausalLM.from_pretrained("EleutherAI/gpt-j-6B")
+
+# Generate text
+inputs = tokenizer("Why is the sky blue?", return_tensors="pt")
+outputs = model.generate(inputs["input_ids"], max_length=50)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+```
+
+---
+
+### **5. Flan-T5**
+**Use Case**: Instruction-following tasks, summarization, translation, Q&A.  
+**How to Use**:
+Install Hugging Face Transformers:
+```bash
+pip install transformers
+```
+
+Example:
+```python
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+
+# Load Flan-T5 model
+tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-small")
+model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-small")
+
+# Generate response
+inputs = tokenizer("Explain the concept of recursion.", return_tensors="pt")
+outputs = model.generate(inputs["input_ids"], max_length=50)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+```
+
+---
+
+### **6. DistilBERT**
+**Use Case**: Sentiment analysis, classification, embeddings.  
+**How to Use**:
+Install dependencies:
+```bash
+pip install transformers
+```
+
+Example:
+```python
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+
+# Load DistilBERT model
+tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
+model = AutoModelForSequenceClassification.from_pretrained("distilbert-base-uncased")
+
+# Sentiment analysis
+inputs = tokenizer("I love learning!", return_tensors="pt")
+outputs = model(**inputs)
+logits = outputs.logits
+print("Logits:", logits)
+```
+
+---
+
+### **7. Falcon (Technology Innovation Institute)**
+**Use Case**: High-performance text generation and language modeling.  
+**How to Use**:
+Install transformers:
+```bash
+pip install transformers
+```
+
+Example:
+```python
+from transformers import AutoTokenizer, AutoModelForCausalLM
+
+# Load Falcon model
+tokenizer = AutoTokenizer.from_pretrained("tiiuae/falcon-7b")
+model = AutoModelForCausalLM.from_pretrained("tiiuae/falcon-7b")
+
+# Generate text
+inputs = tokenizer("What is the meaning of life?", return_tensors="pt")
+outputs = model.generate(inputs["input_ids"], max_length=50)
+print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+```
+
+---
+
+### **8. MiniLM**
+**Use Case**: Lightweight embeddings, semantic search, document ranking.  
+**How to Use**:
+Install `sentence-transformers`:
+```bash
+pip install sentence-transformers
+```
+
+Example:
+```python
+from sentence_transformers import SentenceTransformer
+
+# Load MiniLM model
+model = SentenceTransformer('all-MiniLM-L6-v2')
+
+# Example sentences
+sentences = ["Machine learning is great.", "I enjoy AI research."]
+
+# Generate embeddings
+embeddings = model.encode(sentences)
+print("Embeddings:", embeddings)
+```
+
+---
+
+### **9. Whisper (OpenAI, Open Source)**
+**Use Case**: Speech-to-text transcription.  
+**How to Use**:
+Install `whisper`:
+```bash
+pip install openai-whisper
+```
+
+Example:
+```python
+import whisper
+
+# Load Whisper model
+model = whisper.load_model("base")
+
+# Transcribe audio
+result = model.transcribe("audio.mp3")
+print(result["text"])
+```
+
+---
+
+### Choosing the Right Model
+| **Model**       | **Best For**                             | **Size/Performance**    |
+|------------------|------------------------------------------|--------------------------|
+| **SBERT**        | Semantic similarity, embeddings          | Lightweight             |
+| **LLaMA**        | Text generation, fine-tuning             | Large                   |
+| **BLOOM**        | Multilingual tasks                       | Medium-Large            |
+| **GPT-J/Neo**    | General-purpose text generation          | Large                   |
+| **Flan-T5**      | Instruction-following, Q&A               | Lightweight-Medium      |
+| **DistilBERT**   | Classification, embeddings               | Lightweight             |
+| **Falcon**       | Advanced language modeling               | Medium-Large            |
+| **MiniLM**       | Lightweight embeddings                   | Very Lightweight        |
+| **Whisper**      | Speech-to-text                           | Medium                  |
+
+Let me know if you'd like help implementing a specific use case!
