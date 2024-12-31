@@ -1,0 +1,231 @@
+NYD Hackathon 2025:
+Advanced RAG Challenge
+with Ancient Wisdom
+
+By Yoga Vivek Group
+
+Advanced RAG Challenge
+with Ancient Wisdom
+
+© Challenge Overview
+
+Develop an innovative Al-powered
+solution to extract, understand, and
+communicate the profound wisdom
+of the Bhagavad Gita and Yoga
+Sutras using advanced Retrieval-
+Augmented Generation (RAG)
+
+methodologies.
+
+Dataset
+
+- Comprehensive Bhagavad Gita
+dataset (provided)
+
+- Language support (English for
+now but keep it extensible
+optionally)
+
+- Full text, chapter-wise
+breakdown, translations and
+
+more available here
+
+// RAG Methodologies
+
+=~
+
+which can be
+used/explored
+
+- Graph RAG
+
+- Advanced RAG
+
+- Agentic RAG
+
+- Hybrid Retrieval Approaches
+- Semantic-based Retrieval
+
+¢ Multi-vector Retrieval
+
+‘* Technical Requirements
+Pipeline Expectations
+- Robust and scalable RAG
+
+implementation
+
+- Interactive chatbot interface
+
+- Advanced contextual
+understanding
+
+* High-quality, nuanced
+philosophical responses
+
+* Multilingual query handling
+
+& Deliverables
+1. RAG Pipeline
+
+- Modular, well-documented code
+- Performance metrics
+
+- Optimization techniques
+
+- Jupyter notebook
+
+demonstrations
+
+2. Chatbot Application
+
+- Simple User-friendly interface
+
+- Contextual response generation
+
+3. Documentation
+
+- Technical documentation
+- Architecture design
+* Methodology explanation
+
+- Installation guide
+
+ff] Evaluation Criteria
+
+Technical Excellence (40
+points)
+* RAG approach complexity (15
+points)
+- Code quality (10 points)
+- Performance optimization (15
+
+points)
+
+Functionality (30 points)
+
+- Information retrieval accuracy
+(10 points)
+
+- Response quality (10 points)
+
+- User interface experience (10
+
+points)
+
+Innovation (20 points)
+
+- Novel RAG implementation (10
+points)
+- Creative problem-solving (10
+
+points)
+
+Presentation (10 points)
+
+- Technical explanation clarity (5
+points)
+- Demonstration effectiveness (5
+points)
+Timeline
+Phase 1: Preparation (By Dec
+22, 2024)
+* Dataset distribution
+
+* Environment setup
+
+- Team formation
+
+Phase 2: Development (2
+weeks)
+- Week 1: RAG pipeline
+development
+- Week 2: Chatbot
+
+implementation,Refinement
+
+Phase 3: Submission &
+Evaluation (1 week - By Jan
+
+12, 2025)
+- Documentation submission
+- Presentation preparation
+
+- Final demonstration
+
+™ Recommended
+Technology Stack
+
+- Language Models: Open Source
+or Use Student Credits if you
+have
+
+- Embedding: Sentence
+Transformers,Embedding
+Models
+
+- Vector Databases: Pinecone,
+Chroma, Milvus, PSQL etc.
+
+- Frameworks: LangChain,
+Llamalndex etc.
+
+- Frontend: Streamlit, Gradio,
+
+React
+
+Y Prizes & Recognition
+
+- Top 3 teams receive special
+recognition (INR - 20K, 10K, 5K )
+
+- Potential internship
+opportunities
+
+- Possibility of publication
+
+- Mentorship and networking
+
+— Submission Guidelines
+
+- Complete GitHub repository
+- Detailed README
+- Presentation slides
+
+- Optional video demonstration
+
+° Additional
+Considerations
+
+* Open-source libraries
+encouraged
+
+¢ Ethical Al principles mandatory
+
+* Creative interpretations
+
+welcome
+
+ad
+
+.. support
+
+- Dedicated technical support
+channel
+
+- Planned checkpoints and
+mentorship sessions (Dec
+29,2024 and Jan 5, 2025)
+
+- Regular Q&A opportunities
+
+Disclaimer: This hackathon is about
+exploring the intersection of Al
+technology and philosophical
+wisdom. Participants are
+encouraged to approach the
+challenge with creativity, technical
+rigor, and respect for the
+philosophical depth of the Shrimad
+Bhagavad Gita.
