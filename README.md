@@ -60,16 +60,13 @@ DHARMA is an innovative Retrieval-Augmented Generation (RAG) system that provide
    GROQ_API_KEY=your_groq_api_key
    ```
 
-6. **Initialize the database**
-   ```bash
-   python scripts/init_db.py
-   ```
+
 
 ## 🚀 Usage
 
 1. **Start the application**
    ```bash
-   streamlit run src/app.py
+   streamlit run app.py
    ```
 
 2. **Access the interface**
@@ -99,7 +96,7 @@ This will generate:
 ## 🗂️ Project Structure
 
 ```
-ancient-wisdom-rage/
+NYD_HACKATHONE/
 ├── src/
 │   ├── config/
 │   │   ├── prompts.py      # Response templates
@@ -107,14 +104,14 @@ ancient-wisdom-rage/
 │   ├── core/
 │   │   ├── generator.py    # Response generation
 │   │   ├── pipeline.py     # Main RAG pipeline
-│   │   ├── preprocessor.py # Query processing
+│   │   ├── query_preprocessor.py # Query processing
 │   │   └── retriever.py    # Verse retrieval
-│   ├── evaluation/
-│   │   └── evaluator.py    # Performance metrics
-│   └── app.py             # Streamlit interface
+│   └── evaluation/
+|        ├──run_evaluation.py
+│        └── evaluator.py    # Performance metrics
+├── app.py                    # Streamlit interface
 ├── data/
-│   └── files              # Source text data
-├── tests/                 # Unit tests
+│   └── files              # Source text data             
 ├── requirements.txt      # Dependencies
 └── README.md            # This file
 ```

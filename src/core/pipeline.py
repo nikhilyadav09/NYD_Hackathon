@@ -47,7 +47,7 @@ class VedicWisdomPipeline:
                 'original': processed['original_query'],
                 'processed': processed['processed_query']
             }
-            
+            print(result)
             return result
             
         except Exception as e:
@@ -60,6 +60,17 @@ class VedicWisdomPipeline:
             "type": "clarification_needed",
             "response": {
                 "summary": f"Could you please provide more details about your question: '{query}'? "
+                          "This will help me find the most relevant wisdom from the ancient texts.",
+                "sources": []
+            }
+        }
+    
+    def _handle_no_verses():
+        """Handle queries that nhas no verses"""
+        return {
+            "type": "clarification_needed",
+            "response": {
+                "summary": f"Could you please provide more details of the Question "
                           "This will help me find the most relevant wisdom from the ancient texts.",
                 "sources": []
             }

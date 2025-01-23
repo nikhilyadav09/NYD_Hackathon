@@ -9,8 +9,10 @@ Relevant verses from ancient texts:
 Please provide a comprehensive answer that:
 1. Directly addresses the question using wisdom from the provided verses
 2. Explains the practical application of this wisdom
-3. Connects the verses' teachings to the question
+3. Connects the verses teachings to the question
 4. Do not include verse citations in your response - they will be added automatically
+5 all should be in points in short and simple.
+
 
 Answer in a clear, conversational style while maintaining philosophical accuracy."""
 
@@ -24,8 +26,9 @@ Please provide a deep philosophical analysis that:
 2. Explores the philosophical implications
 3. Connects to universal truths
 4. Provides practical wisdom for modern life
+5 all should be in points in short and simple
 
-Reference verses specifically and maintain philosophical rigor while being accessible."""
+Answer in a clear, conversational style ,Reference verses specifically and maintain philosophical rigor while being accessible."""
 
     practical = """Question: {query}
 
@@ -37,8 +40,9 @@ Please provide guidance that:
 2. Offers specific, actionable advice
 3. Explains how to apply this wisdom today
 4. Addresses real-world challenges
+5 all should be in points in short and simple.
 
-Focus on practical application while preserving the depth of the teachings."""
+Answer in a clear, conversational style ,Focus on practical application while preserving the depth of the teachings."""
 
     clarification = """I notice your question might be about {query}. While I'm knowledgeable about the ancient wisdom of the Bhagavad Gita and Yoga Sutras, I'd be best able to help if you could:
 
