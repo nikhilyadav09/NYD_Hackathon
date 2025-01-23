@@ -141,7 +141,7 @@ The system returns responses in the following JSON format:
 
 Current system performance:
 - Average Response Time: 1.17s
-- Semantic Similarity: 0.85
+- Semantic Similarity: 0.43
 - BLEU Score: 0.72
 - ROUGE-1: 0.76
 - Cache Hit Rate: 85%
