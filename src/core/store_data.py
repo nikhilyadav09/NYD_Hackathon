@@ -49,8 +49,8 @@ def generate_embeddings(texts, batch_size=32):
 def verify_data_files():
     """Verify the processed data files exist and have correct structure"""
     try:
-        gita_path = '/home/nikhil/sitare /others/NYD_Hackathon/ancient-wisdom-rag/data/processed_bhagwat_gita.csv'
-        yoga_path = '/home/nikhil/sitare /others/NYD_Hackathon/ancient-wisdom-rag/data/processed_YS.csv'
+        gita_path = '/home/nikhil/sitare /others/NYD_Hackathon/data/processed_bhagwat_gita.csv'
+        yoga_path = '/home/nikhil/sitare /others/NYD_Hackathon/data/processed_yoga_sutra.csv'
         
         gita_df = pd.read_csv(gita_path)
         yoga_df = pd.read_csv(yoga_path)
@@ -89,7 +89,7 @@ def verify_data_files():
 def setup_database():
     """Setup database with correct schema"""
     conn = psycopg2.connect(
-        dbname="ancient_wisdom",
+        dbname="ancient_wisdoms",
         user="postgres",
         password="Nikhil@930",
         host="localhost"

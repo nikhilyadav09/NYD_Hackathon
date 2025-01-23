@@ -53,7 +53,7 @@ DHARMA is an innovative Retrieval-Augmented Generation (RAG) system that provide
 5. **Configure environment variables**
    Create a `.env` file in the project root:
    ```env
-   DB_NAME=ancient_wisdom
+   DB_NAME=ancient_wisdoms
    DB_USER=your_username
    DB_PASSWORD=your_password
    DB_HOST=localhost
