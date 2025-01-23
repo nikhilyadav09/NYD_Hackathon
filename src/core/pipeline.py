@@ -2,8 +2,8 @@ from typing import Dict
 import logging
 from src.core.generator import WisdomResponseGenerator
 from src.core.retriever import VedicKnowledgeRetriever
-
 from src.core.query_preprocessor import QueryProcessor
+
 class VedicWisdomPipeline:
     """Enhanced RAG pipeline for Vedic wisdom"""
     
@@ -24,7 +24,7 @@ class VedicWisdomPipeline:
             # Preprocess query
             processed = self.preprocessor.process_query(query)
             
-            # Check if clarification needed
+            # Check if clarification is needed
             if processed['needs_clarification']:
                 return self._handle_clarification_needed(processed['original_query'])
             
@@ -47,7 +47,6 @@ class VedicWisdomPipeline:
                 'original': processed['original_query'],
                 'processed': processed['processed_query']
             }
-            print(result)
             return result
             
         except Exception as e:
@@ -65,13 +64,13 @@ class VedicWisdomPipeline:
             }
         }
     
-    def _handle_no_verses():
-        """Handle queries that nhas no verses"""
+    def _handle_no_verses(self) -> Dict:
+        """Handle cases where no relevant verses are found"""
         return {
-            "type": "clarification_needed",
+            "type": "no_results",
             "response": {
-                "summary": f"Could you please provide more details of the Question "
-                          "This will help me find the most relevant wisdom from the ancient texts.",
+                "summary": "I couldn't find any relevant verses. Could you please provide more details "
+                           "about your question to help refine the search?",
                 "sources": []
             }
         }

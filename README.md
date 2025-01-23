@@ -85,8 +85,8 @@ DHARMA is an innovative Retrieval-Augmented Generation (RAG) system that provide
 
 Run the evaluation pipeline to measure system performance:
 ```bash
-python src/evaluation/run_evaluation.py
-```
+ PYTHONPATH="." python3 src/evaluation/run_evaluation.py
+ ```
 
 This will generate:
 - Accuracy metrics (BLEU, ROUGE scores)
