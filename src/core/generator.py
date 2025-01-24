@@ -53,6 +53,7 @@ class WisdomResponseGenerator:
             max_tokens = self._determine_response_length(word_count)
             
             response = await self._generate_llm_response(prompt, max_tokens)
+
             return self._format_response(response, verses)
             
         except Exception as e:
@@ -201,7 +202,8 @@ class WisdomResponseGenerator:
         # Fix common issues
         response = re.sub(r'\s+', ' ', response)  # Fix multiple spaces
         response = re.sub(r'\[\s*(\d+)\s*\]', r'[\1]', response)  # Fix citation spacing
-        
+        response = re.sub(r'\*', '', response)  # Remove all asterisks and replace with space
+
         # Ensure proper sentence endings
         response = re.sub(r'([a-z])\s+([A-Z])', r'\1. \2', response)
         

@@ -59,6 +59,11 @@ DHARMA is an innovative Retrieval-Augmented Generation (RAG) system that provide
    DB_HOST=localhost
    GROQ_API_KEY=your_groq_api_key
    ```
+6. **Setting up data in database**
+
+   ```
+   /usr/bin/python3 "/src/core/store_data.py"
+   ```
 
 
 
