@@ -53,23 +53,25 @@ DHARMA is an innovative Retrieval-Augmented Generation (RAG) system that provide
 5. **Configure environment variables**
    Create a `.env` file in the project root:
    ```env
-   DB_NAME=ancient_wisdom
+   DB_NAME=ancient_wisdoms
    DB_USER=your_username
    DB_PASSWORD=your_password
    DB_HOST=localhost
    GROQ_API_KEY=your_groq_api_key
    ```
+6. **Setting up data in database**
 
-6. **Initialize the database**
-   ```bash
-   python scripts/init_db.py
    ```
+   /usr/bin/python3 "/src/core/store_data.py"
+   ```
+
+
 
 ## 🚀 Usage
 
 1. **Start the application**
    ```bash
-   streamlit run src/app.py
+   streamlit run app.py
    ```
 
 2. **Access the interface**
@@ -88,8 +90,8 @@ DHARMA is an innovative Retrieval-Augmented Generation (RAG) system that provide
 
 Run the evaluation pipeline to measure system performance:
 ```bash
-python src/evaluation/run_evaluation.py
-```
+ PYTHONPATH="." python3 src/evaluation/run_evaluation.py
+ ```
 
 This will generate:
 - Accuracy metrics (BLEU, ROUGE scores)
@@ -99,7 +101,7 @@ This will generate:
 ## 🗂️ Project Structure
 
 ```
-ancient-wisdom-rage/
+NYD_HACKATHONE/
 ├── src/
 │   ├── config/
 │   │   ├── prompts.py      # Response templates
@@ -107,14 +109,14 @@ ancient-wisdom-rage/
 │   ├── core/
 │   │   ├── generator.py    # Response generation
 │   │   ├── pipeline.py     # Main RAG pipeline
-│   │   ├── preprocessor.py # Query processing
+│   │   ├── query_preprocessor.py # Query processing
 │   │   └── retriever.py    # Verse retrieval
-│   ├── evaluation/
-│   │   └── evaluator.py    # Performance metrics
-│   └── app.py             # Streamlit interface
+│   └── evaluation/
+|        ├──run_evaluation.py
+│        └── evaluator.py    # Performance metrics
+├── app.py                    # Streamlit interface
 ├── data/
-│   └── files              # Source text data
-├── tests/                 # Unit tests
+│   └── files              # Source text data             
 ├── requirements.txt      # Dependencies
 └── README.md            # This file
 ```
@@ -144,7 +146,7 @@ The system returns responses in the following JSON format:
 
 Current system performance:
 - Average Response Time: 1.17s
-- Semantic Similarity: 0.85
+- Semantic Similarity: 0.43
 - BLEU Score: 0.72
 - ROUGE-1: 0.76
 - Cache Hit Rate: 85%

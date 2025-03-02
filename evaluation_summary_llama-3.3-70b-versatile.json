@@ -1,10 +1,10 @@
 {
   "model_name": "llama-3.3-70b-versatile",
-  "average_semantic_similarity": 0.45387698113918307,
-  "average_bleu_score": 0.0011815194786126493,
-  "average_rouge1": 0.05388152638911481,
-  "average_rouge2": 0.008253687210906259,
-  "average_rougeL": 0.0442613069499672,
+  "average_semantic_similarity": 0.43135025799274446,
+  "average_bleu_score": 0.0017601311795672602,
+  "average_rouge1": 0.06765480242038391,
+  "average_rouge2": 0.007670353006125634,
+  "average_rougeL": 0.04974704748169463,
   "average_question_match_score": 0.8071287870407104,
   "num_samples": 10
 }

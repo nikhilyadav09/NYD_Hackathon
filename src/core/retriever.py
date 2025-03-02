@@ -32,9 +32,11 @@ class VedicKnowledgeRetriever:
         """Initialize BM25 for keyword-based search"""
         try:
             with self.conn.cursor() as cur:
-                cur.execute("SELECT translation, explanation FROM verses")
-                docs = [f"{t} {e}" for t, e in cur.fetchall()]
-                tokenized_docs = [word_tokenize(doc.lower()) for doc in docs]
+                # cur.execute("SELECT translation, explanation FROM verses")
+                cur.execute("SELECT explanation FROM verses")
+                # docs = [f"{t} {e}" for t, e in cur.fetchall()]
+                docs = [row[0] for row in cur.fetchall()]
+                tokenized_docs = [word_tokenize(doc.lower()) for doc in docs if doc]
                 self.bm25 = BM25Okapi(tokenized_docs)
                 logging.info("BM25 index created successfully")
         except Exception as e:
